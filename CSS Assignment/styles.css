@@ -1,0 +1,150 @@
+/*Part 1*/
+*{
+    box-sizing:border-box;
+}
+/*Exercise 1: Responsive Navigation Bar*/
+nav{
+    background-color:black;
+    padding:5px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    padding:10px;
+}
+nav ul{
+    display:flex;
+    list-style-type:none;
+
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (min-width: 769px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/*Exercise 2: Responsive Student Profile Card*/
+.studentcard{
+    border:1px solid black;
+    padding:20px;
+    display:flex;
+
+}
+.studentimage img{
+    border-radius:10px;
+    max-width:100%;
+}
+.studentimage{
+    margin:20px;
+}
+.studentinfo{
+    padding:10px;
+    font: size 1hw;
+    max-width:100%;
+}
+@media (max-width: 768px) {
+    .studentcard {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+}
+@media (min-width: 769px) {
+    .studentcard {
+        flex-direction: row;
+        justify-content: center;
+    
+    }   
+}
+/*Exercise 3: Responsive Gallery*/
+.displayimages{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    margin:20px;
+    grid-gap:10px;
+   
+}
+.displayimages img{
+    width:100%;
+    height:auto;
+    padding:10px;
+}
+@media screen and (max-width:768px){
+    .displayimages{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media screen and (max-width:480px){
+    .displayimages{
+        grid-template-columns:1fr;
+    }
+}
+
+/*Exercise 4: Student Management Dashboard*/
+.main{
+    display:grid;
+    grid-template-columns:1fr 3fr;
+}
+.side,.maincontent{
+    padding:20px;
+    margin:10px;
+    border:1px solid black;
+}
+@media screen and (max-width:480px){
+    .side{
+        display:none;
+    }
+}
+
+/*part 2*/
+/*Exercise 5: Animated Button*/
+.btn{
+    background-color:blue;
+    color:white;
+}
+.btn:hover{
+    background-color:green;
+    transform:scale(1.1);
+    transition: all 0.5s;
+}
+/*Exercise 6: Expanding Card*/
+.card{
+    width:200px;
+    height:200px;
+    background-color:green;
+    transition-property: width, height;
+    transition-duration: 1s;
+}
+.card:hover{
+    width:250px;
+    height:250px;
+}
+/*Exercise 7: Navigation Hover Effect*/
+.tran{
+    transition-property:color,fontsize,text-decoration;
+    transition-duration:1s;
+    transition-timing-function:ease-in-out;
+}
+.tran:hover{
+    color:red;
+    font-size:24px;
+    text-decoration:underline;
+}
+/*Exercise 8: Image Zoom Effect*/
+.zoom{
+    margin:10px auto;
+}
+
+.zoom:hover{
+    transform:scale(1.2);
+    transition: all 0.5s;
+
+}
