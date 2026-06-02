@@ -1,0 +1,124 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color:azure;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+header{
+    background-color:#003366;
+    color:white;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    animation:fadeIn 1s ease;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    animation:fadeIn 1.5s ease;
+}
+
+.hero h1{
+    margin-bottom:15px;
+}
+
+.hero p{
+    margin-bottom:20px;
+}
+
+.hero button{
+    background-color:#003366;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.5s;
+}
+
+.hero button:hover{
+    background-color:orange;
+    transform:scale(1.1);
+}
+
+.features{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:40px 20px;
+    flex-wrap:wrap;
+    animation:fadeIn 2s ease;
+}
+
+.card{
+    background-color:white;
+    width:250px;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card h2{
+    margin-bottom:10px;
+}
+
+footer{
+    background-color:#003366;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+/* Responsive Design */
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .features{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+    }
+}
