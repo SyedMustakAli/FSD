@@ -139,12 +139,126 @@ nav ul{
     text-decoration:underline;
 }
 /*Exercise 8: Image Zoom Effect*/
-.zoom{
-    margin:10px auto;
+.zoomimage{
+    margin :20px auto;
+    width:300px;
+
 }
+
 
 .zoom:hover{
     transform:scale(1.2);
     transition: all 0.5s;
 
 }
+
+/*part3*/
+/* Exercise 9: Loading Spinner */
+.spinner{
+    width:150px;
+    height:150px;
+    border-top:5px solid black;
+    border-left: 5px solid black;
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+    
+}
+
+/* Exercise 10: Moving Ball */
+.movingball{
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border-radius: 50%;
+    animation-name:ball;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes ball{
+    0%{
+        transform:translate(0px,0px);
+    }
+    50%{
+        transform: translate(250px,0px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+
+/* Exercise 11: Bouncing Text */
+.bouncingtext{
+    animation-name: text;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    font-size: 28px;
+
+}
+@keyframes text {
+    0%{
+        transform: translate(0px,0px);
+    }
+    50%{
+        transform: translate(0px,20px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+    
+}
+
+/* Exercise 12: Traffic Signal Animation */
+.traffic{
+    display:block;
+}
+.light1,.light2,.light3{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin:10px;
+    animation-name:light;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+.light1{
+    animation-name: redlight;
+   
+}
+.light2{
+    animation-name: yellowlight;
+    
+}
+.light3{
+    animation-name: greenlight;
+}
+
+@keyframes redlight{
+    0%, 33.3% { background-color: red; }
+    33.4%, 100% { background-color: white; }  
+}
+
+@keyframes yellowlight{
+    0%, 33.3% { background-color: white; }
+    33.4%, 66.6% { background-color: yellow; }
+    66.7%, 100% { background-color: white; }
+}
+
+@keyframes greenlight{
+    0%, 66.6% { background-color: white; }
+    66.7%, 100% { background-color: green; }
+}
+
